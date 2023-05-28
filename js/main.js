@@ -87,6 +87,7 @@ Employee.prototype.renderEmployees = function () {
   main.style.flexWrap = "nowrap";
   main.style.alignItems = "center";
   main.style.height = "75vh"
+  main.style.justifyContent = "space-around"
   body.appendChild(main)
 
 
@@ -94,41 +95,163 @@ Employee.prototype.renderEmployees = function () {
   Employee.prototype.renderEmployees = function () {
 
 
-    let divCard = document.createElement("div");
-    divCard.setAttribute("width", "100px");
-    divCard.setAttribute("class", "employee");
-    divCard.style.color = "white";
-    divCard.style.padding = "15px";
-    divCard.style.margin = "0 5px";
-    divCard.style.height = "50%";
-    divCard.style.display = "flex";
-    divCard.style.flexDirection = "column";
-    divCard.style.flexWrap = "nowrap";
-    divCard.style.alignItems = "center";
-    main.appendChild(divCard);
+    // let divCard = document.createElement("div");
+    // divCard.setAttribute("width", "100px");
+    // divCard.setAttribute("class", "employee");
+    // divCard.style.color = "white";
+    // divCard.style.padding = "15px";
+    // divCard.style.margin = "0 5px";
+    // divCard.style.height = "50%";
+    // divCard.style.display = "flex";
+    // divCard.style.flexDirection = "column";
+    // divCard.style.flexWrap = "nowrap";
+    // divCard.style.alignItems = "center";
+    // main.appendChild(divCard);
 
     if (this.department === "Finance") {
-      divCard.style.backgroundColor = "red";
+
+
+
+      let divCard1 = document.createElement("div");
+      divCard1.setAttribute("width", "200vh");
+      divCard1.setAttribute("class", "Finance");
+      divCard1.style.color = "white";
+      divCard1.style.padding = "15px";
+      divCard1.style.margin = "0 5px";
+      divCard1.style.width = "13vw";
+      divCard1.style.height = "50%";
+      divCard1.style.display = "flex";
+      divCard1.style.flexDirection = "column";
+      divCard1.style.flexWrap = "nowrap";
+      divCard1.style.alignItems = "flex-start";
+      main.appendChild(divCard1);
+      divCard1.style.backgroundColor = "#35a2b6";
+      let divFinance = document.createElement("div");
+      divCard1.appendChild(divFinance);
+
+
+
+
+      let cardImage = document.createElement("img");
+      cardImage.src = this.image;
+      cardImage.alt = this.name;
+      cardImage.setAttribute("width", "200vh")
+      divCard1.appendChild(cardImage);
+
+
+      let cardtext = document.createElement("p");
+      cardtext.innerHTML = `Name: ${this.name} <br> ID: ${this.uniqueID} <br> Department: <u> ${this.department} </u>  <br> Level: ${this.level} <br> Salary: ${Math.trunc(this.finalSalary)}`;
+      cardtext.style.fontSize = "18px"
+      divCard1.appendChild(cardtext)
+
     } else if (this.department === "Administration") {
-      divCard.style.backgroundColor = "blue";
+
+      let divCard2 = document.createElement("div");
+      divCard2.setAttribute("width", "200vh");
+      divCard2.setAttribute("class", "Adminstration");
+      divCard2.style.color = "white";
+      divCard2.style.padding = "15px";
+      divCard2.style.margin = "0 5px";
+      divCard2.style.width = "13vw";
+      divCard2.style.height = "50%";
+      divCard2.style.display = "flex";
+      divCard2.style.flexDirection = "column";
+      divCard2.style.flexWrap = "nowrap";
+      divCard2.style.alignItems = "flex-start";
+      main.appendChild(divCard2);
+
+      divCard2.style.backgroundColor = "#2f506e	";
+
+      let cardImage = document.createElement("img");
+      cardImage.src = this.image;
+      cardImage.alt = this.name;
+      cardImage.setAttribute("width", "200vh")
+      divCard2.appendChild(cardImage);
+
+
+      let cardtext = document.createElement("p");
+      cardtext.innerHTML = `Name: ${this.name} <br> ID: ${this.uniqueID} <br> Department:<u> ${this.department}</u> <br> Level: ${this.level} <br> Salary: ${Math.trunc(this.finalSalary)}`;
+      cardtext.style.fontSize = "16.5px"
+      divCard2.appendChild(cardtext)
+
+
     } else if (this.department === "Development") {
-      divCard.style.backgroundColor = "green";
+
+      let divCard3 = document.createElement("div");
+      divCard3.setAttribute("width", "200vh");
+      divCard3.setAttribute("class", "development");
+      divCard3.style.color = "white";
+      divCard3.style.padding = "15px";
+      divCard3.style.margin = "0 5px";
+      divCard3.style.width = "13vw";
+      divCard3.style.height = "50%";
+      divCard3.style.display = "flex";
+      divCard3.style.flexDirection = "column";
+      divCard3.style.flexWrap = "nowrap";
+      divCard3.style.alignItems = "flex-start";
+      main.appendChild(divCard3);
+
+      divCard3.style.backgroundColor = "#2c2d2d";
+
+      let cardImage = document.createElement("img");
+      cardImage.src = this.image;
+      cardImage.alt = this.name;
+      cardImage.setAttribute("width", "200vh")
+      divCard3.appendChild(cardImage);
+
+
+      let cardtext = document.createElement("p");
+      cardtext.innerHTML = `Name: ${this.name} <br> ID: ${this.uniqueID} <br> Department: <u> ${this.department} </u>  <br> Level: ${this.level} <br> Salary: ${Math.trunc(this.finalSalary)}`;
+      cardtext.style.fontSize = "17.5px"
+      divCard3.appendChild(cardtext)
+
     } else if (this.department === "Marketing") {
-      divCard.style.backgroundColor = "black";
+
+      let divCard4 = document.createElement("div");
+      divCard4.setAttribute("width", "200vh");
+      divCard4.setAttribute("class", "Marketing");
+
+      divCard4.style.color = "white";
+      divCard4.style.padding = "15px";
+      divCard4.style.margin = "0 5px";
+      divCard4.style.width = "13vw";
+      divCard4.style.height = "50%";
+      divCard4.style.display = "flex";
+      divCard4.style.flexDirection = "column";
+      divCard4.style.flexWrap = "nowrap";
+      divCard4.style.alignItems = "flex-start";
+      main.appendChild(divCard4);
+
+      divCard4.style.backgroundColor = "#aa9b9b";
+
+      let cardImage = document.createElement("img");
+      cardImage.src = this.image;
+      cardImage.alt = this.name;
+      cardImage.setAttribute("width", "200vh")
+      divCard4.appendChild(cardImage);
+
+
+      let cardtext = document.createElement("p");
+      cardtext.innerHTML = `Name: ${this.name} <br> ID: ${this.uniqueID} <br> Department:<u> ${this.department} </u> <br> Level: ${this.level} <br> Salary: ${Math.trunc(this.finalSalary)}`;
+      cardtext.style.fontSize = "17.5px"
+      divCard4.appendChild(cardtext)
     }
 
 
-    let cardImage = document.createElement("img");
-    cardImage.src = this.image;
-    cardImage.alt = this.name;
-    cardImage.setAttribute("width", "150px")
-    divCard.appendChild(cardImage);
 
 
-    let cardtext = document.createElement("p");
-    cardtext.textContent = `Name: ${this.name} -ID: ${this.uniqueID} Department: ${this.department} -Level: ${this.level} -Salary: ${Math.trunc(this.finalSalary)}`
-    cardtext.style.fontSize = "12px"
-    divCard.appendChild(cardtext)
+
+    // let cardImage = document.createElement("img");
+    // cardImage.src = this.image;
+    // cardImage.alt = this.name;
+    // cardImage.setAttribute("width", "150px")
+    // divCard.appendChild(cardImage);
+
+
+    // let cardtext = document.createElement("p");
+    // cardtext.textContent = `Name: ${this.name} -ID: ${this.uniqueID} Department: ${this.department} -Level: ${this.level} -Salary: ${Math.trunc(this.finalSalary)}`
+    // cardtext.style.fontSize = "12px"
+    // divCard.appendChild(cardtext)
 
     // let divFinance = document.getElementsByClassName("employee")[0];
     // divFinance[0].styl.backgroundColor = "red"
@@ -141,6 +264,7 @@ Employee.prototype.renderEmployees = function () {
 
 
 for (let i = 0; i < allEmployee.length; i++) {
+
   allEmployee[i].renderEmployees();
 }
 Ghazi.renderEmployees()
