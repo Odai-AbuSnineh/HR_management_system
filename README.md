@@ -13,4 +13,5 @@ HR management system for a company, where they can organize their employees with
 +  Rendering prototype method to render each employee's information in a separate card 
 
 + Adding Styling
-+
++ 
++ 
